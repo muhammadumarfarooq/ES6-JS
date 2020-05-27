@@ -82,34 +82,92 @@ for ( var i = 0; i < products.length; i++ ) {
   }
 }
 
-console.log(filteredProducts);
+// console.log(filteredProducts);
 
 //ES6
 var newFilteredProducts = products.filter(function (product) {
   return product.type === "fruit";
 });
 
-console.log(newFilteredProducts);
+// console.log(newFilteredProducts);
 
 // filter Advanced Use
 var advancedFiltered = products.filter(function (product) {
   return product.type === "vegetable" && product.price > 10 && product.quantity > 0;
 });
 
-console.log(advancedFiltered);
+// console.log(advancedFiltered);
 
 
 //Real life use case
-var userPost = {id: 4, name: "Something interesting"};
+var userPost = { id: 4, name: "Something interesting" };
 
-var userComments = [{postId: 4, text: "these are some texts"},
-  {postId: 4, text: "these are some more texts"}, {postId: 6, text: "these are some texts"}];
+var userComments = [{ postId: 4, text: "these are some texts" },
+  { postId: 4, text: "these are some more texts" }, { postId: 6, text: "these are some texts" }];
 
 
-function commentsForPosts(post, comments){
+function commentsForPosts(post, comments) {
   return comments.filter((comment) => {
     return comment.postId === post.id;
   });
 }
 
-console.log(commentsForPosts(userPost, userComments));
+// console.log(commentsForPosts(userPost, userComments));
+
+//===== Find Helper =====
+
+var users = [{ name: "Alex" },
+  { name: "Joe" }, { name: "Andrew" }];
+
+var user;
+//ES5
+for ( var i = 0; i < users.length; i++ ) {
+  if ( users[i].name === "Joe" ) {
+    user = users[i];
+    break;
+  }
+}
+
+console.log(user);
+
+//ES6
+var returnedUser = users.find(function (user) {
+  return user.name === "Joe";
+});
+
+console.log(returnedUser);
+
+// find Advanced Use
+
+var posts = [{ id: 1, title: "New Post" }, { id: 2, title: "Old Post" }];
+
+var comment = { postId: 2, content: "Great post" };
+
+function postForComment(posts, comment) {
+  return posts.find(function (post) {
+    return post.id === comment.postId;
+  });
+}
+
+console.log(postForComment(posts, comment));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
