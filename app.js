@@ -26,6 +26,9 @@ numbers.forEach(function (number) {
 
 // console.log(sum);
 
+//practical use case: to call a method several times i.e to delete spam emails.
+
+
 //===== Map Helper =====
 
 var numbersSingle = [2, 4, 6];
@@ -46,7 +49,18 @@ const newNumbersDouble = numbersSingle.map(function (number) {
 
 console.log(newNumbersDouble);
 
+// map Advanced Use
+//plucking properties
 
+const cars = [
+  { modal: "Buick", price: "Cheap" },
+  { modal: "Camaro", price: "Expensive" }
+];
 
+const carPrices = cars.map(function (car) {
+  return car.price;
+});
 
+console.log(carPrices);
 
+//practical use case: to render list of items on webpage.
