@@ -5,7 +5,7 @@ var colors = ["red", "green", "blue"];
 
 //ES5
 for ( var i = 0; i < colors.length; i++ ) {
-  console.log(colors[i]);
+  // console.log(colors[i]);
 }
 
 //ES6
@@ -28,7 +28,6 @@ numbers.forEach(function (number) {
 
 //practical use case: to call a method several times i.e to delete spam emails.
 
-
 //===== Map Helper =====
 
 var numbersSingle = [2, 4, 6];
@@ -39,28 +38,62 @@ for ( var i = 0; i < numbersSingle.length; i++ ) {
   numbersDouble.push(numbersSingle[i] * 2);
 }
 
-console.log(numbersDouble);
+// console.log(numbersDouble);
 
 //ES6
 
-const newNumbersDouble = numbersSingle.map(function (number) {
+var newNumbersDouble = numbersSingle.map(function (number) {
   return number * 2;
 });
 
-console.log(newNumbersDouble);
+// console.log(newNumbersDouble);
 
 // map Advanced Use
 //plucking properties
 
-const cars = [
+var cars = [
   { modal: "Buick", price: "Cheap" },
   { modal: "Camaro", price: "Expensive" }
 ];
 
-const carPrices = cars.map(function (car) {
+var carPrices = cars.map(function (car) {
   return car.price;
 });
 
-console.log(carPrices);
+// console.log(carPrices);
 
-//practical use case: to render list of items on webpage.
+//practical use case: to render list of items on web page.
+
+
+//===== Filter Helper =====
+var products = [
+  { name: "banana", type: 'fruit', quantity: 1, price: 5 },
+  { name: "cucumber", type: 'vegetable', quantity: 0, price: 9 },
+  { name: "carrot", type: 'vegetable', quantity: 10, price: 21 },
+  { name: "mango", type: 'fruit', quantity: 13, price: 1 },
+];
+
+//ES5
+var filteredProducts = [];
+
+for ( var i = 0; i < products.length; i++ ) {
+  if ( products[i].type === "vegetable" ) {
+    filteredProducts.push(products[i]);
+  }
+}
+
+console.log(filteredProducts);
+
+//ES6
+var newFilteredProducts = products.filter(function (product) {
+  return product.type === "fruit";
+});
+
+console.log(newFilteredProducts);
+
+// filter Advanced Use
+const advancedFiltered = products.filter(function (product) {
+  return product.type === "vegetable" && product.price > 10 && product.quantity > 0;
+});
+
+console.log(advancedFiltered);
