@@ -92,8 +92,24 @@ var newFilteredProducts = products.filter(function (product) {
 console.log(newFilteredProducts);
 
 // filter Advanced Use
-const advancedFiltered = products.filter(function (product) {
+var advancedFiltered = products.filter(function (product) {
   return product.type === "vegetable" && product.price > 10 && product.quantity > 0;
 });
 
 console.log(advancedFiltered);
+
+
+//Real life use case
+var userPost = {id: 4, name: "Something interesting"};
+
+var userComments = [{postId: 4, text: "these are some texts"},
+  {postId: 4, text: "these are some more texts"}, {postId: 6, text: "these are some texts"}];
+
+
+function commentsForPosts(post, comments){
+  return comments.filter((comment) => {
+    return comment.postId === post.id;
+  });
+}
+
+console.log(commentsForPosts(userPost, userComments));
