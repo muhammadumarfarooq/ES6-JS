@@ -128,14 +128,14 @@ for ( var i = 0; i < users.length; i++ ) {
   }
 }
 
-console.log(user);
+// console.log(user);
 
 //ES6
 var returnedUser = users.find(function (user) {
   return user.name === "Joe";
 });
 
-console.log(returnedUser);
+// console.log(returnedUser);
 
 // find Advanced Use
 
@@ -149,25 +149,30 @@ function postForComment(posts, comment) {
   });
 }
 
-console.log(postForComment(posts, comment));
+// console.log(postForComment(posts, comment));
 
+//===== The EVERY and SUM Helper =====
 
+var computers = [
+  { name: "compaq", ram: 4 },
+  { name: "dell", ram: 16 },
+  { name: "hp", ram: 32 }
+];
 
+//ES5
+var allComputersCanRunProgram = true;
+var someComputersCanRunProgram = false;
 
+for(var i = 0; i < computers.length; i++){
+    var computer = computers[i];
+    
+    if(computer.ram < 16){
+      allComputersCanRunProgram = false;
+    }else{
+      someComputersCanRunProgram = true;
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log("allComputersCanRunProgram:", allComputersCanRunProgram);
+console.log("someComputersCanRunProgram:", someComputersCanRunProgram);
 
