@@ -176,3 +176,10 @@ for(var i = 0; i < computers.length; i++){
 console.log("allComputersCanRunProgram:", allComputersCanRunProgram);
 console.log("someComputersCanRunProgram:", someComputersCanRunProgram);
 
+//ES6
+var allComputersCanRunProgramNew = computers.every(function(computer){
+  return computer > 16;
+});
+
+console.log(allComputersCanRunProgramNew);
+
