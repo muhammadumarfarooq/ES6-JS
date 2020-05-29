@@ -177,9 +177,23 @@ console.log("allComputersCanRunProgram:", allComputersCanRunProgram);
 console.log("someComputersCanRunProgram:", someComputersCanRunProgram);
 
 //ES6
+//EVERY
 var allComputersCanRunProgramNew = computers.every(function(computer){
-  return computer > 16;
+  return computer.ram > 16;
 });
 
 console.log(allComputersCanRunProgramNew);
+
+// SOME
+const someComputersCanRunProgramNew = computers.some(function(computer){
+    return computer.ram > 16;
+});
+
+
+console.log(someComputersCanRunProgramNew);
+
+
+
+
+
 
