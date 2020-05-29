@@ -185,15 +185,29 @@ var allComputersCanRunProgramNew = computers.every(function(computer){
 console.log(allComputersCanRunProgramNew);
 
 // SOME
-const someComputersCanRunProgramNew = computers.some(function(computer){
+var someComputersCanRunProgramNew = computers.some(function(computer){
     return computer.ram > 16;
 });
 
 
 console.log(someComputersCanRunProgramNew);
 
+//More with every and some
+
+var names = ["Umar", "Ali", "Hassan", "Umair"];
+
+var allNamesHaveLenght = names.every(function (name) {
+  return name.length > 3;
+});
+
+console.log(allNamesHaveLenght);
 
 
+var someNamesHaveLenght = names.some(function (name) {
+  return name.length > 3;
+});
+
+console.log(someNamesHaveLenght);
 
 
 
