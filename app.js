@@ -235,7 +235,52 @@ var formIsValid = fields.every(function (field) {
     return field.validate();
 });
 
-console.log(formIsValid);
+// console.log(formIsValid);
+
+
+//===== The REDUCE Helper =====
+
+var numbersReduce = [1, 6, 10];
+
+//ES5
+
+var sum = 0;
+
+for(var i = 0; i < numbersReduce.length; i++){
+  sum += numbersReduce[i]
+}
+
+// console.log(sum);
+
+//ES6
+
+var sumNew = numbersReduce.reduce(function(previous, number){
+  return previous + number;
+}, 0);
+
+console.log(sumNew);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
