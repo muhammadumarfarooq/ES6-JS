@@ -209,6 +209,41 @@ var someNamesHaveLenght = names.some(function (name) {
 
 // console.log(someNamesHaveLenght);
 
+//Real World use
+
+function Field(value){
+  this.value = value;
+}
+
+Field.prototype.validate = function(){
+  return this.value.length > 4;
+};
+
+var username = new Field("malik_umar");
+var password = new Field("123456");
+var dob = new Field("20/05/1998");
+
+// console.log(username.validate());
+// console.log(password.validate());
+// console.log(dob.validate());
+
+
+// console.log(username.validate() && password.validate() && dob.validate());
+var fields = [username, password, dob];
+
+var formIsValid = fields.every(function (field) {
+    return field.validate();
+});
+
+console.log(formIsValid);
+
+
+
+
+
+
+
+
 
 
 
