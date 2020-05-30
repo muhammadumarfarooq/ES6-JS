@@ -173,8 +173,8 @@ for(var i = 0; i < computers.length; i++){
     }
 }
 
-console.log("allComputersCanRunProgram:", allComputersCanRunProgram);
-console.log("someComputersCanRunProgram:", someComputersCanRunProgram);
+// console.log("allComputersCanRunProgram:", allComputersCanRunProgram);
+// console.log("someComputersCanRunProgram:", someComputersCanRunProgram);
 
 //ES6
 //EVERY
@@ -182,7 +182,7 @@ var allComputersCanRunProgramNew = computers.every(function(computer){
   return computer.ram > 16;
 });
 
-console.log(allComputersCanRunProgramNew);
+// console.log(allComputersCanRunProgramNew);
 
 // SOME
 var someComputersCanRunProgramNew = computers.some(function(computer){
@@ -190,7 +190,7 @@ var someComputersCanRunProgramNew = computers.some(function(computer){
 });
 
 
-console.log(someComputersCanRunProgramNew);
+// console.log(someComputersCanRunProgramNew);
 
 //More with every and some
 
@@ -200,14 +200,47 @@ var allNamesHaveLenght = names.every(function (name) {
   return name.length > 3;
 });
 
-console.log(allNamesHaveLenght);
+// console.log(allNamesHaveLenght);
 
 
 var someNamesHaveLenght = names.some(function (name) {
   return name.length > 3;
 });
 
-console.log(someNamesHaveLenght);
+// console.log(someNamesHaveLenght);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
