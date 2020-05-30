@@ -260,6 +260,26 @@ var sumNew = numbersReduce.reduce(function(previous, number){
 
 console.log(sumNew);
 
+// Advanced use
+
+var namesNew = [
+  {name: "Umar"},
+  {name: "Umair"},
+  {name: "Hassan"}
+];
+
+
+var namesArray = namesNew.reduce(function(previous, name){
+  previous.push( name.name );
+  return previous;
+}, []);
+
+console.log(namesArray);
+
+
+
+
+
 
 
 
